@@ -32,7 +32,7 @@ df1= pd.DataFrame(data1)
 
 
 fig_sunburst = px.sunburst(df1, path=['impact', 'category', 'component'], values='value')
-fig_sunburst.update_traces(hovertemplate = ('%{label}<br>Value = %{value:.2}<br>%{percentParent:.0%}'))
+fig_sunburst.update_traces(hovertemplate = ('%{label}<br>Value = %{value:.2}<br>%{percentRoot:.0%}'))
 # Parallel coordinate
 
 
@@ -157,7 +157,7 @@ def update_sunburst_plot(scatter_selectedData, parallel_selectedData):
                            ]
     
     fig_sunburst=px.sunburst(df1, path=['impact', 'category', 'component'], values='value')
-    fig_sunburst.update_traces(hovertemplate = ('%{label}<br>Value = %{value:.2}<br>%{percentParent:.0%}'))
+    fig_sunburst.update_traces(hovertemplate = ('%{label}<br>Value = %{value:.2}<br>%{percentRoot:.0%}'))
 
     return fig_sunburst
 
